@@ -50,7 +50,14 @@ public class PersistenceManagerFactoryImpl implements ConnectionFactory, Persist
 
     private Reference ref;
 
-    /**
+    
+    public PersistenceManagerFactoryImpl() {
+    	super();
+		this.mcf = new ManagedConnectionFactoryImpl();
+		this.cm = null;
+	}
+
+	/**
      * Constructor 
      * @param mcf the ManagedConnectionFactory
      * @param cm the ConnectionManager
