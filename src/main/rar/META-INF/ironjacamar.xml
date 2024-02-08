@@ -3,10 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="https://www.ironjacamar.org https://docs.jboss.org/ironjacamar/schema/ironjacamar_1_0.xsd"
 	version="1.0">
+
 	<connection-definitions>
 		<connection-definition
 			class-name="org.datanucleus.jdo.connector.ManagedConnectionFactoryImpl"
-			jndi-name="java:/Test" enabled="true" pool-name="MyConnectionPool">"
+			jndi-name="java:/Test" enabled="true" pool-name="MyConnectionPool">
 
 			<!-- Add more config properties as needed -->
 		</connection-definition>
