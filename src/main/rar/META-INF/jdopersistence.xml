@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+	<persistence-unit name="pu">
+		<properties>
+			<property name="datanucleus.connection.resourceType"
+				value="JTA" />
+			<property name="datanucleus.storeManagerType" value="rdbms" />
+			<property name="datanucleus.autoCreateSchema" value="true" />
+			<property name="datanucleus.ConnectionFactoryName"
+				value="java:/TestDS" />
+			<property name="datanucleus.autoStartMechanism"
+				value="Classes" />
+			<property name="datanucleus.autoStartMechanismMode"
+				value="Ignored" />
+			<property name="datanucleus.jtaLocator" value="custom_jndi" />
+			<property name="datanucleus.jtaJndiLocation"
+				value="java:jboss/TransactionManager" />
+		</properties>
+	</persistence-unit>
+</persistence>

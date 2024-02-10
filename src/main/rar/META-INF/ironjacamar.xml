@@ -7,9 +7,11 @@
 	<connection-definitions>
 		<connection-definition
 			class-name="org.datanucleus.jdo.connector.ManagedConnectionFactoryImpl"
-			jndi-name="java:/Test" enabled="true" pool-name="MyConnectionPool">
-
+			jndi-name="java:/Test" enabled="true" use-ccm="true"
+			use-java-context="true" pool-name="MyConnectionPool">
+			<config-property name="PersistenceUnitName">pu</config-property>
 			<!-- Add more config properties as needed -->
+			<config-property name="PersistenceXmlFilename">file:///srv/wildfly-10.1.0.Final/standalone/deployments/jdopersistence.xml</config-property>
 		</connection-definition>
 	</connection-definitions>
 </ironjacamar>
