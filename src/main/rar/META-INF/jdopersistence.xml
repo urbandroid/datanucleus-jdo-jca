@@ -12,6 +12,8 @@ http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
 			<property name="datanucleus.autoCreateSchema" value="true" />
 			<property name="datanucleus.ConnectionFactoryName"
 				value="java:/TestDS" />
+			<property name="datanucleus.ConnectionFactory2Name"
+				value="java:/TestDSN" />
 			<property name="datanucleus.autoStartMechanism"
 				value="Classes" />
 			<property name="datanucleus.autoStartMechanismMode"

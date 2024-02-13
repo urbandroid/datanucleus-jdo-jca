@@ -1,0 +1,36 @@
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema datasource_1_1.xsd">
+
+	<datasource jndi-name="java:/TestDSN"
+		pool-name="TestDSNpool" jta="false" enabled="true"
+		use-java-context="true">
+		<connection-url>jdbc:postgresql://localhost:5432/testdb
+		</connection-url>
+
+		<driver-class>org.postgresql.ds.PGSimpleDataSource</driver-class>
+		<driver>postgres</driver> <!-- Corrected driver name -->
+		<connection-property name="serverName">localhost
+		</connection-property>
+		<connection-property name="portNumber">5432
+		</connection-property>
+		<connection-property name="databaseName">testdb
+		</connection-property>
+		<connection-property name="user">testuser
+		</connection-property>
+		<connection-property name="password">sifre
+		</connection-property>
+
+		<security>
+			<user-name>testuser</user-name>
+			<password>sifre</password>
+		</security>
+		<validation>
+			<valid-connection-checker
+				class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker" />
+			<background-validation>true</background-validation>
+			<exception-sorter
+				class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter" />
+		</validation>
+	</datasource>
+</datasources>

@@ -7,10 +7,16 @@
 	<vendor-name>DataNucleus</vendor-name>
 	<eis-type>JDO Adaptor</eis-type>
 	<resourceadapter>
+
 		<config-property>
 			<config-property-name>ConnectionFactoryName</config-property-name>
 			<config-property-type>java.lang.String</config-property-type>
 			<config-property-value>java:/TestDS</config-property-value>
+		</config-property>
+		<config-property>
+			<config-property-name>ConnectionFactory2Name</config-property-name>
+			<config-property-type>java.lang.String</config-property-type>
+			<config-property-value>java:/TestDSN</config-property-value>
 		</config-property>
 		<config-property>
 			<config-property-name>ConnectionResourceType</config-property-name>

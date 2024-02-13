@@ -6,6 +6,7 @@
 		</exclusions>
 		<dependencies>
 			<module name="javax.jdo" />
+			<module name="org.postgresql" />
 		</dependencies>
 	</deployment>
 </jboss-deployment-structure>
